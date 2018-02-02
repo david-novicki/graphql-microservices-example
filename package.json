@@ -1,0 +1,26 @@
+{
+  "name": "graphql-microservices-example",
+  "version": "1.0.0",
+  "description": "Central GraphQL API and microservices connected using remote schemas.",
+  "main": "./main-api/server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "npm --prefix ./main-api i ./main-api && npm --prefix ./service-1 i ./service-1 && npm --prefix ./service-2 i ./service-2",
+	"start-service-1": "node ./service-1/server",
+	"start-service-2": "node ./service-2/server",
+	"start-main": "node ./main-api/server"
+  },
+  "keywords": [
+    "GraphQL",
+    "Microservices",
+    "NodeJS",
+    "ExpressJS"
+  ],
+  "author": "David Novicki <supercycle91@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "main-api": "file:main-api",
+    "service-1": "file:service-1",
+    "service-2": "file:service-2"
+  }
+}

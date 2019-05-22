@@ -1,5 +1,5 @@
-const { makeExecutableSchema } = require('graphql-tools');
-const data = require('./data');
+const { makeExecutableSchema } = require("graphql-tools");
+const data = require("./data");
 
 // SCHEMA DEFINITION
 const typeDefs = `
@@ -10,19 +10,19 @@ type Article {
   id: ID!
   title: String
   url: String
-}`
+}`;
 
 // RESOLVERS
 const resolvers = {
-	Query: {
-		article: (root, args, context, info) => {
-			return data.find(item => item.id == args.id);
-		}
-	},
-}
+  Query: {
+    article: (root, args, context, info) => {
+      return data.find(item => item.id == args.id);
+    }
+  }
+};
 
 // (EXECUTABLE) SCHEMA
 module.exports = makeExecutableSchema({
-	typeDefs,
-	resolvers
-})
+  typeDefs,
+  resolvers
+});

@@ -16,7 +16,6 @@
   "author": "David Novicki <supercycle91@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "apollo-link-http": "^1.3.2",
     "apollo-server-express": "^1.3.2",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
